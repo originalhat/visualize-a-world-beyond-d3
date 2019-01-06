@@ -20,7 +20,7 @@ class LineSeries extends Component {
   render() {
     let WIDTH = 800;
     let HEIGHT = 300;
-    let TICK_COUNT = 5;
+    let TICK_COUNT = 6;
 
     let MAX_X = Math.max(...[].concat.apply([], this.props.data).map(v => v.x));
     let MAX_Y = Math.max(...[].concat.apply([], this.props.data).map(v => v.y));

@@ -10,8 +10,15 @@ class VerticalAxis extends Component {
   render() {
     return (
       <div className="y-axis">
-        {this.props.verticalTicks.map((v, i) => <div key={i} data-value={v}/>)}
-      </div>    );
+        {
+          this.props.verticalTicks.map((v, i) => {
+              return (
+                <div key={i} data-value={Number.parseFloat(v).toFixed(2)}/>
+              )
+            }
+          )
+        }
+      </div>);
   }
 }
 

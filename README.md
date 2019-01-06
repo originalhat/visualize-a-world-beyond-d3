@@ -4,10 +4,15 @@
 
 ### line charts
 
-- [ ] multi-line
+- [x] single line
+- [x] multi-line
 - [ ] responsive
 - [ ] drag to zoom
 - [ ] crosshair
+- [ ] tooltip
+- [ ] horizontal axis ticks
+- [ ] axis value formatting w/ custom callback
+- [ ] custom x/y axis values 
 
 ### bar charts
 
