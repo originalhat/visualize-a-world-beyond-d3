@@ -4,7 +4,6 @@ import '../App.css';
 import HorizontalAxis from "./HorizontalAxis";
 import VerticalAxis from "./VerticalAxis";
 import Line from "./Line";
-import {COLOR_RANGE} from "../theme";
 
 class LineSeries extends Component {
   static propTypes = {
@@ -35,7 +34,7 @@ class LineSeries extends Component {
           {
             this.props.data.map((v, i) => {
               return (
-                <Line data={v} lineIndex={i} MAX_X={MAX_X} MAX_Y={MAX_Y} HEIGHT={HEIGHT} WIDTH={WIDTH}/>
+                <Line key={i} data={v} lineIndex={i} MAX_X={MAX_X} MAX_Y={MAX_Y} HEIGHT={HEIGHT} WIDTH={WIDTH}/>
               )
             })
           }

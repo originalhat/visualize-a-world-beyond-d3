@@ -19,7 +19,6 @@ body {
 
 svg {
   fill: none;
-  stroke: hotpink;
   display: block;
   stroke-width: 2px;
   border-left: 1px solid black;

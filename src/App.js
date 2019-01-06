@@ -13,15 +13,14 @@ class App extends Component {
     super(props);
     this.state = {
       data: [
-        getRndData(100),
-        getRndData(100),
-        getRndData(100),
+        getRndData(60),
+        getRndData(60),
+        getRndData(60),
       ]
     };
   }
 
   render() {
-    console.log(`this.state.data: `, this.state.data);
     return (
       <div className="App">
         <LineSeries data={this.state.data}/>
