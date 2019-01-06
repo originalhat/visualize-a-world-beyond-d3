@@ -13,8 +13,15 @@ class App extends Component {
     super(props);
     this.state = {
       data: [
-        getRndData(30),
-        getRndData(30),
+        getRndData(30).map(v => {
+          return {x: v.x, y: v.y * 0.4}
+        }),
+        getRndData(30).map(v => {
+          return {x: v.x, y: v.y  * 0.2}
+        }),
+        getRndData(30).map(v => {
+          return {x: v.x, y: v.y  * 0.1}
+        }),
         getRndData(30),
       ]
     };
