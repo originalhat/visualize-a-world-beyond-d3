@@ -13,9 +13,9 @@ class App extends Component {
     super(props);
     this.state = {
       data: [
-        getRndData(60),
-        getRndData(60),
-        getRndData(60),
+        getRndData(30),
+        getRndData(30),
+        getRndData(30),
       ]
     };
   }
@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LineSeries data={this.state.data}/>
+        <LineSeries data={this.state.data} initialHeight={300} initialWidth={800}/>
       </div>
     );
   }

@@ -7,6 +7,8 @@ import Line from "./Line";
 
 class LineSeries extends Component {
   static propTypes = {
+    initialWidth: PropTypes.number.isRequired,
+    initialHeight: PropTypes.number.isRequired,
     data: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
@@ -18,8 +20,8 @@ class LineSeries extends Component {
   };
 
   render() {
-    let WIDTH = 800;
-    let HEIGHT = 300;
+    let WIDTH = this.props.initialWidth;
+    let HEIGHT = this.props.initialHeight;
     let TICK_COUNT = 6;
 
     let MAX_X = Math.max(...[].concat.apply([], this.props.data).map(v => v.x));
@@ -29,7 +31,7 @@ class LineSeries extends Component {
     let y_ticks = this._getTicks(TICK_COUNT, MAX_Y).reverse();
 
     return (
-      <div className="LineSeries" style={{WIDTH: `${WIDTH}px`, HEIGHT: `${HEIGHT}px`}}>
+      <div className="LineSeries">
         <svg height={HEIGHT} width="100%" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} preserveAspectRatio="none">
           {
             this.props.data.map((v, i) => {
