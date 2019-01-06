@@ -30,7 +30,7 @@ class LineSeries extends Component {
 
     return (
       <div className="LineSeries" style={{WIDTH: `${WIDTH}px`, HEIGHT: `${HEIGHT}px`}}>
-        <svg width={WIDTH} height={HEIGHT}>
+        <svg height={HEIGHT} width="100%" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} preserveAspectRatio="none">
           {
             this.props.data.map((v, i) => {
               return (
