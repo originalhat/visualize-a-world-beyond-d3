@@ -6,9 +6,17 @@ import VerticalAxis from "./VerticalAxis";
 import Line from "./Line";
 
 class LineSeries extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0
+    };
+
+    this.lineChart = React.createRef()
+  }
+
   static propTypes = {
-    initialWidth: PropTypes.number.isRequired,
-    initialHeight: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
     data: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
@@ -19,9 +27,19 @@ class LineSeries extends Component {
     ).isRequired
   };
 
+  componentDidMount() {
+    this._resizeSeries();
+    window.addEventListener("resize", this._resizeSeries.bind(this));
+  }
+
+  _resizeSeries() {
+    const LEFT_AXIS_OFFSET = 40;
+    this.setState({width: this.lineChart.clientWidth - LEFT_AXIS_OFFSET});
+  }
+
   render() {
-    let WIDTH = this.props.initialWidth;
-    let HEIGHT = this.props.initialHeight;
+    let WIDTH = this.state.width;
+    let HEIGHT = this.props.height;
     let TICK_COUNT = 6;
 
     let MAX_X = Math.max(...[].concat.apply([], this.props.data).map(v => v.x));
@@ -31,8 +49,8 @@ class LineSeries extends Component {
     let y_ticks = this._getTicks(TICK_COUNT, MAX_Y).reverse();
 
     return (
-      <div className="LineSeries">
-        <svg height={HEIGHT} width="100%" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} preserveAspectRatio="none">
+      <div className="LineSeries" ref={(ref) => this.lineChart = ref}>
+        <svg height={HEIGHT} width={this.state.width} viewBox={`0 0 ${this.state.width} 300`}>
           {
             this.props.data.map((v, i) => {
               return (

@@ -32,7 +32,7 @@ class App extends Component {
       <div className="App">
         <h1>charting sans d3</h1>
         <div className="Panel">
-          <LineSeries data={this.state.data} initialHeight={300} initialWidth={800}/>
+          <LineSeries data={this.state.data} height={300}/>
         </div>
       </div>
     );
