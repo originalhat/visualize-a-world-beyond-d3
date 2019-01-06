@@ -23,7 +23,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LineSeries data={this.state.data} initialHeight={300} initialWidth={800}/>
+        <h1>charting sans d3</h1>
+        <div className="Panel">
+          <LineSeries data={this.state.data} initialHeight={300} initialWidth={800}/>
+        </div>
       </div>
     );
   }
