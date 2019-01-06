@@ -5,7 +5,13 @@ body {
   font-size: 14px;
 }
 
-.LineChart {
+.App {
+  display: flex;
+  justify-content: center;
+  margin: 32px;
+}
+
+.LineSeries {
   position: relative;
   padding-left: 40px;
   padding-bottom: 40px;
@@ -13,7 +19,7 @@ body {
 
 svg {
   fill: none;
-  stroke: #33C7FF;
+  stroke: hotpink;
   display: block;
   stroke-width: 2px;
   border-left: 1px solid black;
