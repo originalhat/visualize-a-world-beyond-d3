@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "deploy": "rm-rf build/ && react-scripts build && cf push beyond-d3 -p build/ -b staticfile_buildpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

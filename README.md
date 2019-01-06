@@ -12,7 +12,8 @@
 - [ ] tooltip
 - [ ] horizontal axis ticks
 - [ ] axis value formatting w/ custom callback
-- [ ] custom x/y axis values 
+- [ ] custom x/y axis values
+- [ ] line **thiccness** 
 
 ### bar charts
 
