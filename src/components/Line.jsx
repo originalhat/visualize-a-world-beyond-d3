@@ -27,7 +27,7 @@ class Line extends Component {
     }).join(' ')}`;
 
     return (
-        <path d={d} style={{stroke: COLOR_RANGE[this.props.lineIndex]}}/>
+        <path d={d} style={{stroke: COLOR_RANGE[this.props.lineIndex], strokeWidth: 3}}/>
     );
   }
 }
