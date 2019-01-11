@@ -1,5 +1,5 @@
 body {
-  background-color: #fafafa;
+  background-color: #FFF4E0;
   font-family: sans-serif;
   font-size: 14px;
   margin: 0;
@@ -20,7 +20,7 @@ body {
 }
 
 .Panel {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 2px;
   margin: 16px;
   border: 1px solid;

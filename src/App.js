@@ -31,6 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>charting sans d3</h1>
+
         <div className="Panel">
           <LineSeries data={this.state.data} height={300}/>
         </div>
